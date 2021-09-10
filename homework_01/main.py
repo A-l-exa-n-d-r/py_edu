@@ -24,6 +24,11 @@ PRIME = "prime"
 
 
 def is_prime(num):
+    """
+    функция определения простое-ли число
+    :param num: число на проверку
+    :return: True - число простое, False - иначе
+    """
     if num > 1:
         for i in range(2, int(num ** 0.5) + 1):
             if num % i == 0:
