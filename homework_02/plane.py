@@ -14,13 +14,20 @@ class Plane(Vehicle):
         self.max_cargo = max_cargo
 
     def load_cargo(self, loaded_cargo):
-        new_cargo = self.cargo + loaded_cargo
-        if new_cargo <= self.max_cargo:
-            self.cargo = new_cargo
+        """
+        наполняет cargo указанным количеством loaded_cargo, при условии не превышения итога над max_cargo
+        """
+        cargo_needed = self.cargo + loaded_cargo
+        if cargo_needed <= self.max_cargo:
+            self.cargo = cargo_needed
         else:
             raise CargoOverload
 
     def remove_all_cargo(self):
+        """
+        сбрасывает cargo в 0
+        :return: сколько cargo было
+        """
         be_cargo = self.cargo
         self.cargo = 0
         return be_cargo

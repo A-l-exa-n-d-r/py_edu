@@ -14,12 +14,19 @@ class Vehicle(ABC):
         self.fuel_consumption = fuel_consumption
 
     def start(self):
-        if (not self.started) and (self.fuel > 0):
-            self.started = True
-        else:
-            raise LowFuelError
+        """
+        перетаскивает состояние started в True, при наличии не отрицательного fuel
+        """
+        if not self.started:      # По ТЗ есть, но пока нет логики "запуска" - можно спокойно утилизировать проверку 🦆
+            if self.fuel > 0:
+                self.started = True
+            else:
+                raise LowFuelError
 
     def move(self, distance):
+        """
+        тратит fuel на прохождение distance, в зависимости от fuel_consumption, запрещает попытки исчерпать остаток fuel
+        """
         fuel_need = distance * self.fuel_consumption
         if fuel_need <= self.fuel:
             self.fuel -= fuel_need
