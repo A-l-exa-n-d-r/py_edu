@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+  About
+{% endblock %}
+
+
+{% block content %}
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+</svg>
+
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium amet architecto autem consectetur consequatur corporis cum debitis delectus doloribus ea earum eius exercitationem inventore iste, iure maiores minus mollitia nam, necessitatibus nemo neque nesciunt nisi nulla odit placeat possimus quaerat quam quis recusandae rem saepe sint sunt tempora ullam vitae voluptates? Deleniti earum iste necessitatibus quisquam. Aliquid animi corporis culpa cum dicta doloribus eaque exercitationem harum id iste iusto libero magnam molestiae officia omnis, quas, rem soluta sunt voluptas voluptate. Aperiam asperiores est laudantium modi nulla provident quibusdam quod ullam velit voluptas. Animi doloribus ea illo iste numquam quidem soluta voluptatem. Adipisci alias assumenda, at autem cupiditate distinctio dolore dolorem doloribus dolorum eligendi error hic illum itaque laborum libero molestias nemo omnis provident quaerat recusandae saepe sint suscipit tenetur velit vitae voluptatibus voluptatum. Accusantium assumenda commodi, dolor dolorem doloribus dolorum explicabo fugiat harum illum iste laborum maxime modi mollitia neque nisi numquam officiis perferendis quam quia reiciendis rem reprehenderit, repudiandae soluta suscipit totam ullam voluptas voluptate. Dolores doloribus ducimus fuga itaque natus, placeat repellat voluptas voluptatum? Excepturi ipsam maxime possimus ullam? Culpa earum magnam obcaecati quod reiciendis sint temporibus. Aliquid aperiam dolorum est, facere impedit maxime quas ratione recusandae temporibus velit voluptate voluptatem? Amet animi atque cupiditate dignissimos eaque eos expedita harum ipsam, itaque magnam natus, nobis quaerat quisquam recusandae sequi sit tenetur vero voluptatibus! Ad adipisci aliquid blanditiis explicabo illo iusto modi nam non, quaerat quam quasi, reprehenderit sed, velit? Alias consequuntur delectus deleniti illum magni perferendis quidem reprehenderit similique. Assumenda atque dolores et impedit in ipsum itaque labore maiores neque nisi nobis, nostrum odit perspiciatis porro qui repellendus, vel! Aliquid atque cum cupiditate deleniti dignissimos doloribus dolorum eaque earum, esse fugiat ipsa iste, itaque iure laudantium necessitatibus nobis nostrum odio quam quia quod ratione repudiandae, similique tempora totam voluptatum! Beatae culpa eligendi et iste itaque libero maiores modi, provident repellat repellendus?
+  </div>
+</div>
+  <a class="btn btn-primary" href="{{ url_for('index') }}"  role="button">Go to home</a>
+{% endblock content %}
