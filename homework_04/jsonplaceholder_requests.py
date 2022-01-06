@@ -18,4 +18,4 @@ async def get_tuple_data() -> tuple:
     req = await asyncio.gather(fetch_json(USERS_DATA_URL),
                                fetch_json(POSTS_DATA_URL)
                                )
-    return tuple(req)
+    return req

@@ -47,16 +47,14 @@ def json_to_post_model(post: dict) -> Post:
 
 
 async def insert_in_db(rows: list):
-    async with Session() as session:
-        session: AsyncSession
+    async with Session() as session:  # type: AsyncSession
         async with session.begin():
             session.add_all(rows)
         await session.commit()
 
 
 async def fetch_users_with_posts():
-    async with Session() as session:
-        session: AsyncSession
+    async with Session() as session:  # type: AsyncSession
 
         statement = select(User).options(selectinload(User.posts))
 
@@ -71,8 +69,7 @@ async def fetch_users_with_posts():
 
 
 async def fetch_users_posts_count():
-    async with Session() as session:
-        session: AsyncSession
+    async with Session() as session:  # type: AsyncSession
 
         user_posts_count = func.count(Post.user_id).label("total_posts")
         j = join(User, Post, User.id == Post.user_id)
